@@ -1,15 +1,16 @@
 package sber.api;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
 public interface myDAO<T> {
     List<T> getAll();
 
-//    T get(long id);
+    T get(int id) throws SQLException;
 
-    boolean add(Object o);
+    boolean add(User user);
 
-    void delete(Object o);
+    void delete(int id);
 
 }
